@@ -1,0 +1,1 @@
+#hasheq((cc . 1) (echo . 8) (icanon . 2) (nccs . 32) (tcf . 4) (tcsanow . 0) (term . 60))
