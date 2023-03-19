@@ -29,7 +29,9 @@
            (map
             (λ (los)
               (cons (string->symbol (car los))
-                    (string->number (caddr los) 16)))
+                    (if (pair? (cdddr los))
+                        (string->number (cadddr los) 16)
+                        0)))
             (map string-split (string-split (get-output-string out) "\n")))))
         (define file (open-output-file (build-path dir "termios/sizes.rktd") #:exists 'replace))
         (write sizes file)
